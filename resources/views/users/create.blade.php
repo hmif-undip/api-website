@@ -2,8 +2,26 @@
 
 @section('title', "Create | Users")
 
+@section('css')
+    {{-- @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger alert-dismissible show fade">
+                <i class="bi bi-file-excel"></i> {{ $error }}
+
+                <button type="button" class="btn-close btn-close-session" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endforeach
+    @endif --}}
+@endsection
+
 @section('content')
     @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="">
+                    <i class="bi bi-file-excel"></i> {{ $error }}----------
+                </div>
+            @endforeach
+
         <div class="card-body pt-0">
             @foreach ($errors->all() as $error)
                 <div class="alert alert-danger alert-dismissible show fade">
@@ -99,7 +117,7 @@
                         </div> --}}
 
                         <div class="col-sm-12 d-flex justify-content-end mt-4">
-                            <button type="button" class="btn btn-primary me-1 mb-1 submit_create_user" id="submit_create_user" onclick='preventDoubleClick("form_create_user", "submit_create_user")'>Submit</button>
+                            <button type="button" class="btn btn-primary me-1 mb-1" id="submit_create_user" onclick='preventDoubleClick("form_create_user", "submit_create_user")'>Submit</button>
 
                             <a href="{{ url('users') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
                         </div>

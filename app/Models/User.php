@@ -83,4 +83,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get all of the websiteProfile for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function websiteProfile()
+    {
+        return $this->hasMany(websiteProfile::class, 'modified_by', 'id');
+    }
 }

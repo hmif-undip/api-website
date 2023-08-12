@@ -99,7 +99,7 @@
                         </div> --}}
 
                         <div class="col-sm-12 d-flex justify-content-end">
-                            <button type="button" class="btn btn-primary me-1 mb-1 submit_update_user" id="submit_update_user" onclick='preventDoubleClick("form_update_user", "submit_update_user")'>Submit</button>
+                            <button type="button" class="btn btn-primary me-1 mb-1" id="submit_update_user" onclick='preventDoubleClick("form_update_user", "submit_update_user")'>Submit</button>
 
                             <a href="{{ url('users') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
                         </div>

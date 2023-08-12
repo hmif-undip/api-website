@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebsiteProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,8 @@ Route::middleware('auth')->group(function () {
 
     // Route::resource('users', 'UserController');
     Route::resource('users', UserController::class);
+    Route::get('/website-profile', [WebsiteProfileController::class, 'index'])->name('website-profile.index');
+    Route::post('/website-profile', [WebsiteProfileController::class, 'store'])->name('website-profile.store');
 });
 
 require __DIR__.'/auth.php';
