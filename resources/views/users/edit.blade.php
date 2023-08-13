@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Edit | Users")
+@section('title', "Edit | User")
 
 @section('content')
     @if ($errors->any())
@@ -22,7 +22,7 @@
 
         <div class="card-content">
             <div class="card-body">
-                <form method="POST" action="{{ url('users/'.$user->id) }}" id="form_update_user">
+                <form method="POST" action="{{ url('user/'.$user->id) }}" id="form_update_user">
                     @method('PATCH')
                     @csrf
 
@@ -101,7 +101,7 @@
                         <div class="col-sm-12 d-flex justify-content-end">
                             <button type="button" class="btn btn-primary me-1 mb-1" id="submit_update_user" onclick='preventDoubleClick("form_update_user", "submit_update_user")'>Submit</button>
 
-                            <a href="{{ url('users') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
+                            <a href="{{ url('user') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
                         </div>
                     </div>
                 </form>

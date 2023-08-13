@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Users
-        Route::resource('users', UserController::class);
+        Route::resource('user', UserController::class);
 
     // Website Profile
         Route::get('/website-profile', function () {

@@ -7,10 +7,10 @@
     </a>
 </li>
 
-<li class="sidebar-item {{ request()->is('users*') ? 'active' : '' }}">
-    <a href="{{ url('users') }}" class='sidebar-link'>
+<li class="sidebar-item {{ request()->is('user*') ? 'active' : '' }}">
+    <a href="{{ url('user') }}" class='sidebar-link'>
         <i class="bi bi-people-fill"></i>
-        <span>Users</span>
+        <span>User</span>
     </a>
 </li>
 

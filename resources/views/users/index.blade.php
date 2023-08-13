@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Users')
+@section('title', 'User')
 
 @section('content')
     <section class="section">
@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    <a href="{{ url('users/create') }}" class="btn icon btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add">
+                    <a href="{{ url('user/create') }}" class="btn icon btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add">
                         <i class="bi bi-plus-circle"></i>
                     </a>
                 </div>
@@ -43,11 +43,11 @@
                                 <td>{{ config('custom.roles.'.$user->role) }}</td>
                                 <td>
                                     <div class="buttons">
-                                        <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn icon btn-primary tooltip-class" data-bs-placement="left" title="Edit">
+                                        <a href="{{ url('user/'.$user->id.'/edit') }}" class="btn icon btn-primary tooltip-class" data-bs-placement="left" title="Edit">
                                             <i class="bi bi-pencil"></i>
                                         </a>
 
-                                        <button type="button" class="btn icon btn-danger tooltip-class" data-bs-placement="right" title="Remove" data-bs-toggle="modal" data-bs-target="#modal_remove" onclick="modalRemove('{{ url('users/'.$user->id) }}')" {{ Auth::user()->id == $user->id ? 'disabled' : '' }}>
+                                        <button type="button" class="btn icon btn-danger tooltip-class" data-bs-placement="right" title="Remove" data-bs-toggle="modal" data-bs-target="#modal_remove" onclick="modalRemove('{{ url('user/'.$user->id) }}')" {{ Auth::user()->id == $user->id ? 'disabled' : '' }}>
                                             <i class="bi bi-trash-fill"></i>
                                         </button>
                                     </div>

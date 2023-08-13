@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Create | Users")
+@section('title', "Create | User")
 
 @section('css')
     {{-- @if ($errors->any())
@@ -40,7 +40,7 @@
 
         <div class="card-content">
             <div class="card-body">
-                <form method="POST" action="{{ url('users') }}" id="form_create_user">
+                <form method="POST" action="{{ url('user') }}" id="form_create_user">
                     @method('POST')
                     @csrf
 
@@ -119,7 +119,7 @@
                         <div class="col-sm-12 d-flex justify-content-end mt-4">
                             <button type="button" class="btn btn-primary me-1 mb-1" id="submit_create_user" onclick='preventDoubleClick("form_create_user", "submit_create_user")'>Submit</button>
 
-                            <a href="{{ url('users') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
+                            <a href="{{ url('user') }}" class="btn btn-light-secondary mx-1 mb-1">Back</a>
                         </div>
                     </div>
                 </form>
