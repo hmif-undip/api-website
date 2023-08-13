@@ -7,19 +7,25 @@
     <title>Login</title>
     <link rel="stylesheet" href="{{asset('assets/css/main/app.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/pages/auth.css')}}">
-    <link rel="shortcut icon" href="{{asset('assets/images/logo/favicon.svg')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('assets/images/logo/favicon.png')}}" type="image/png">
+    {{-- <link rel="shortcut icon" href="{{asset('assets/images/logo/favicon.svg')}}" type="image/x-icon"> --}}
+    <link rel="shortcut icon" href="{{asset(website_profile() ? website_profile()->logo : 'assets/images/logo/favicon.png')}}" type="image/png">
 </head>
 
 <body>
     <div id="auth">
         <div class="row h-100">
             <div class="col-lg-5 col-12">
-                <div id="auth-left">
-                    <div class="auth-logo mb-5">
-                        <a href="#"><img src="{{asset('assets/images/logo/logo.svg')}}" alt="Logo"></a>
+                <div id="auth-left" class="py-5">
+                    <div class="auth-logo mb-3 text-center">
+                        <a href="#">
+                            <img src="{{asset(website_profile() ? website_profile()->logo : 'assets/images/logo/favicon.png')}}" alt="Logo" srcset="" style="width: 100px;height:100px">
+                        </a>
                     </div>
-                    <h1 class="auth-title">Log in.</h1>
+
+                    <h1 class="auth-title text-center">
+                        Login
+                    </h1>
+
                     {{-- <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p> --}}
 
                     @error('error')

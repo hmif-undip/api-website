@@ -34,10 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Route::resource('users', 'UserController');
-    Route::resource('users', UserController::class);
-    Route::get('/website-profile', [WebsiteProfileController::class, 'index'])->name('website-profile.index');
-    Route::post('/website-profile', [WebsiteProfileController::class, 'store'])->name('website-profile.store');
+    // Users
+        Route::resource('users', UserController::class);
+
+    // Website Profile
+        Route::get('/website-profile', function () {
+            return view('website_profiles.index');
+        })->name('website-profile.index');
+        Route::post('/website-profile', [WebsiteProfileController::class, 'store'])->name('website-profile.store');
 });
 
 require __DIR__.'/auth.php';

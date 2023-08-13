@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Users')
+@section('title', 'Website Profile')
 
 @section('css')
     <link rel="stylesheet" href="{{asset('assets/extensions/filepond/filepond.css')}}">
@@ -57,18 +57,18 @@
                                     <div class="row">
                                         <div class="form-group col-md-4">
                                             <label for="website_name" class="form-label">Nama Website <span class="text-danger">*</span></label>
-                                            <input type="text" id="website_name" class="form-control  @error('website_name') is-invalid @enderror" name="website_name" placeholder="Website Name" value="{{ old('website_name') ?? ($website_profile ? $website_profile->website_name : "") }}">
+                                            <input type="text" id="website_name" class="form-control  @error('website_name') is-invalid @enderror" name="website_name" placeholder="Website Name" value="{{ old('website_name') ?? (website_profile() ? website_profile()->website_name : "") }}">
                                         </div>
 
                                         <div class="form-group col-md-5">
                                             <label for="keyword" class="form-label">Keyword <span class="text-danger">*</span></label>
                                             <small class="text-muted">(Nama Organisasi)</small>
-                                            <input type="text" id="keyword" class="form-control  @error('keyword') is-invalid @enderror" name="keyword" placeholder="Keyword" value="{{ old('keyword') ?? ($website_profile ? $website_profile->keyword : "") }}">
+                                            <input type="text" id="keyword" class="form-control  @error('keyword') is-invalid @enderror" name="keyword" placeholder="Keyword" value="{{ old('keyword') ?? (website_profile() ? website_profile()->keyword : "") }}">
                                         </div>
 
                                         <div class="form-group col-md-3">
                                             <label for="url" class="form-label">Url Website<span class="text-danger">*</span></label>
-                                            <input type="text" id="url" class="form-control  @error('url') is-invalid @enderror" name="url" placeholder="Url Website" value="{{ old('url') ?? ($website_profile ? $website_profile->url : "") }}">
+                                            <input type="text" id="url" class="form-control  @error('url') is-invalid @enderror" name="url" placeholder="Url Website" value="{{ old('url') ?? (website_profile() ? website_profile()->url : "") }}">
                                         </div>
                                     </div>
                                 </div>
@@ -77,14 +77,14 @@
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label for="description" class="form-label">Deskripsi Utama Website <span class="text-danger">*</span></label>
-                                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="8" name="description" placeholder="Deskripsi Utama Website">{{ old('description') ?? ($website_profile ? $website_profile->description : "") }}</textarea>
+                                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="8" name="description" placeholder="Deskripsi Utama Website">{{ old('description') ?? (website_profile() ? website_profile()->description : "") }}</textarea>
                                         </div>
 
                                         <div class="form-group col-md-3">
                                             <label for="keyword" class="form-label">Logo Saat Ini</label>
 
                                             <div>
-                                                <img src="{{asset( $website_profile ? $website_profile->logo : 'assets/images/faces/1.jpg' )}}" alt="Logo Saat Ini" width="200px">
+                                                <img src="{{asset( website_profile() ? website_profile()->logo : 'assets/images/faces/1.jpg' )}}" alt="Logo Saat Ini" width="200px">
                                             </div>
                                         </div>
 
@@ -107,19 +107,19 @@
                                     <div class="row">
                                         <div class="form-group col-md-5">
                                             <label for="tagline" class="form-label">Tagline Organisasi</label>
-                                            <input type="text" id="tagline" class="form-control" name="tagline" placeholder="Tagline Organisasi" value="{{ old('tagline') ?? ($website_profile ? $website_profile->tagline : "") }}">
+                                            <input type="text" id="tagline" class="form-control" name="tagline" placeholder="Tagline Organisasi" value="{{ old('tagline') ?? (website_profile() ? website_profile()->tagline : "") }}">
                                             <p><small class="text-muted">(Biarkan jika tidak ada)</small></p>
                                         </div>
 
 
                                         <div class="form-group col-md-4">
                                             <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                                            <input type="text" id="email" class="form-control  @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') ?? ($website_profile ? $website_profile->email : "") }}">
+                                            <input type="text" id="email" class="form-control  @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') ?? (website_profile() ? website_profile()->email : "") }}">
                                         </div>
 
                                         <div class="form-group col-md-3">
                                             <label for="year_now" class="form-label">Tahun Organisasi <span class="text-danger">*</span></label>
-                                            <input type="number" id="year_now" class="form-control  @error('year_now') is-invalid @enderror" name="year_now" placeholder="Tahun Organisasi" value="{{ old('year_now') ?? ($website_profile ? $website_profile->year_now : "") }}">
+                                            <input type="number" id="year_now" class="form-control  @error('year_now') is-invalid @enderror" name="year_now" placeholder="Tahun Organisasi" value="{{ old('year_now') ?? (website_profile() ? website_profile()->year_now : "") }}">
                                         </div>
                                     </div>
                                 </div>
@@ -128,12 +128,12 @@
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label for="address" class="form-label">Alamat Organisasi <span class="text-danger">*</span></label>
-                                            <textarea class="form-control @error('address') is-invalid @enderror" id="address" rows="4" name="address" placeholder="Alamat Organisasi">{{ old('address') ?? ($website_profile ? $website_profile->address : "") }}</textarea>
+                                            <textarea class="form-control @error('address') is-invalid @enderror" id="address" rows="4" name="address" placeholder="Alamat Organisasi">{{ old('address') ?? (website_profile() ? website_profile()->address : "") }}</textarea>
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="hp" class="form-label">No Hp <span class="text-danger">*</span></label>
-                                            <textarea class="form-control @error('hp') is-invalid @enderror" id="hp" rows="4" name="hp" placeholder="No Hp">{{ old('hp') ?? ($website_profile ? $website_profile->hp : "") }}</textarea>
+                                            <textarea class="form-control @error('hp') is-invalid @enderror" id="hp" rows="4" name="hp" placeholder="No Hp">{{ old('hp') ?? (website_profile() ? website_profile()->hp : "") }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="map" class="form-label">Map <span class="text-danger">*</span></label>
-                                        <textarea class="form-control @error('map') is-invalid @enderror" id="map" rows="4" name="map" placeholder="Map">{{ old('map') ?? ($website_profile ? $website_profile->map : "") }}</textarea>
+                                        <textarea class="form-control @error('map') is-invalid @enderror" id="map" rows="4" name="map" placeholder="Map">{{ old('map') ?? (website_profile() ? website_profile()->map : "") }}</textarea>
                                     </div>
                                 </div>
 
@@ -158,7 +158,7 @@
                                         <label for="map" class="form-label">Iframe <span class="text-danger">*</span></label>
 
                                         <div>
-                                            {!! $website_profile->map ?? "---------- Belum ada iframe map ----------" !!}
+                                            {!! website_profile()->map ?? "---------- Belum ada iframe map ----------" !!}
                                             {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3959.6575618239676!2d110.4400358!3d-7.0494651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e2294766f97b631!2sDepartemen%20Teknik%20Informatika%20%2F%20Ilmu%20Komputer!5e0!3m2!1sen!2sid!4v1599440658218!5m2!1sen!2sid" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> --}}
                                         </div>
                                     </div>

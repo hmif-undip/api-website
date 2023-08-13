@@ -16,7 +16,7 @@
 
 <li class="sidebar-item {{ request()->is('website-profile*') ? 'active' : '' }}">
     <a href="{{ url('website-profile') }}" class='sidebar-link'>
-        <i class="bi bi-people-fill"></i>
+        <i class="bi bi-postcard-fill"></i>
         <span>Website Profile</span>
     </a>
 </li>
