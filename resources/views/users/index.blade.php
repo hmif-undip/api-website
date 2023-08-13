@@ -1,8 +1,25 @@
 @extends('layout')
 
-@section('title', 'User')
+@section('title', 'Data User')
 
 @section('content')
+    <div class="page-title mb-4">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Data User</h3>
+                <p class="text-subtitle text-muted"></p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
     <section class="section">
         @if (session('success'))
             <div class="alert alert-success alert-dismissible show fade">
@@ -14,7 +31,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="float-start">
-                    <a href="{{ url('user/create') }}" class="btn icon btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add">
+                    <a href="{{ url('user/create') }}" class="btn icon btn-success tooltip-class" data-bs-placement="bottom" title="Tambah">
                         <i class="bi bi-plus-circle"></i>
                     </a>
                 </div>
@@ -47,7 +64,7 @@
                                             <i class="bi bi-pencil"></i>
                                         </a>
 
-                                        <button type="button" class="btn icon btn-danger tooltip-class" data-bs-placement="right" title="Remove" data-bs-toggle="modal" data-bs-target="#modal_remove" onclick="modalRemove('{{ url('user/'.$user->id) }}')" {{ Auth::user()->id == $user->id ? 'disabled' : '' }}>
+                                        <button type="button" class="btn icon btn-danger tooltip-class" data-bs-placement="right" title="Hapus" data-bs-toggle="modal" data-bs-target="#modal_remove" onclick="modalRemove('{{ url('user/'.$user->id) }}')" {{ Auth::user()->id == $user->id ? 'disabled' : '' }}>
                                             <i class="bi bi-trash-fill"></i>
                                         </button>
                                     </div>
@@ -107,7 +124,7 @@
 
         // Init Tooltip
         document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('#table_users .tooltip-class'))
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('.tooltip-class'))
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl)
             })

@@ -1,27 +1,9 @@
 @extends('layout')
 
-@section('title', "Create | User")
-
-@section('css')
-    {{-- @if ($errors->any())
-        @foreach ($errors->all() as $error)
-            <div class="alert alert-danger alert-dismissible show fade">
-                <i class="bi bi-file-excel"></i> {{ $error }}
-
-                <button type="button" class="btn-close btn-close-session" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endforeach
-    @endif --}}
-@endsection
+@section('title', "Tambah User")
 
 @section('content')
     @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                <div class="">
-                    <i class="bi bi-file-excel"></i> {{ $error }}----------
-                </div>
-            @endforeach
-
         <div class="card-body pt-0">
             @foreach ($errors->all() as $error)
                 <div class="alert alert-danger alert-dismissible show fade">
@@ -33,10 +15,28 @@
         </div>
     @endif
 
-    <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Add User</h4>
+    <div class="page-title mb-4">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Tambah User</h3>
+                <p class="text-subtitle text-muted"></p>
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('user') }}">User</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tambah User</li>
+                    </ol>
+                </nav>
+            </div>
         </div>
+    </div>
+
+    <div class="card">
+        {{-- <div class="card-header">
+            <h4 class="card-title">Create User</h4>
+        </div> --}}
 
         <div class="card-content">
             <div class="card-body">
@@ -44,7 +44,7 @@
                     @method('POST')
                     @csrf
 
-                    <div class="form-body">
+                    <div class="form-body py-4">
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Name <span class="text-danger">*</span></label>
