@@ -3,18 +3,6 @@
 @section('title', "Edit | User")
 
 @section('content')
-    @if ($errors->any())
-        <div class="card-body pt-0">
-            @foreach ($errors->all() as $error)
-                <div class="alert alert-danger alert-dismissible show fade">
-                    <i class="bi bi-file-excel"></i> {{ $error }}
-
-                    <button type="button" class="btn-close btn-close-session" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endforeach
-        </div>
-    @endif
-
     <div class="page-title mb-4">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
@@ -32,6 +20,18 @@
             </div>
         </div>
     </div>
+
+    @if ($errors->any())
+        <div class="card-body pt-0">
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-danger alert-dismissible show fade">
+                    <i class="bi bi-file-excel"></i> {{ $error }}
+
+                    <button type="button" class="btn-close btn-close-session" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endforeach
+        </div>
+    @endif
 
     <div class="card">
         {{-- <div class="card-header">
