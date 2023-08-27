@@ -10,9 +10,9 @@ We have developed HMIF Super Admin using Laravel 10 and the admin template from 
   - #### Chrome/Edge/Arc/Mozilla/Brave/or any browser you want.
   - #### Laragon
     - You can download Laragon [here](https://laragon.org/download/)
-  - #### PHP Version 8.1+ (*If in the version PHP of laragon not 8.1+)
+  - #### PHP Version 8.1+ (*If on the version PHP of laragon not 8.1+)
     - You can download PHP [here](https://windows.php.net/download#php-8.1)
-  - #### My SQL version 8+ (*If in the version My SQL of laragon not 8+)
+  - #### My SQL version 8+ (*If on the version My SQL of laragon not 8+)
     - You can download My SQL [here](https://www.mysql.com/downloads/)
   - #### Composer
     - You can download Composer [here](https://getcomposer.org/download/)
