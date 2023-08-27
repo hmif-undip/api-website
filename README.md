@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## HMIF Super Admin Documentation
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p>This is a repository of the HMIF Undip Super Admin project.</p>
+We have developed HMIF Super Admin using Laravel 10 and the admin template from <a href="https://github.com/zuramai/laravel-mazer">Mazer</a>. This application is a combination of APIs and admins from various applications that have been developed by HMIF Undip, such as DMW++, Bukulink, DBO, and the main website. This application serves as the backend containing APIs and serves as a space for administrators to configure or make data changes on both the front-end and backend applications.
 
-## About Laravel
+### How to develop this application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- ### Prerequisites
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  - #### Chrome/Edge/Arc/Mozilla/Brave/or any browser you want.
+  - #### Laragon
+    - You can download Laragon [here](https://laragon.org/download/)
+  - #### PHP Version 8.1+ (*If in the version PHP of laragon not 8.1+)
+    - You can download PHP [here](https://windows.php.net/download#php-8.1)
+  - #### My SQL version 8+ (*If in the version My SQL of laragon not 8+)
+    - You can download My SQL [here](https://www.mysql.com/downloads/)
+  - #### Composer
+    - You can download Composer [here](https://getcomposer.org/download/)
+  - #### Node.js
+    - You can download Node.js [here](https://nodejs.org/en/download/)
+    - Or you can install Node.js using [nvm](https://github.com/nvm-sh/nvm)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- ### Installation
+  - You can clone this repository using `git clone https://github.com/hmif-undip/api-website.git`
+  - Then change directory to the repository folder using `cd api-website`
+  - Install all dependencies using `composer install`
+  - Create database in laragon
+  - Clone the .env.example file and rename it to .env, then fill in the required environment variables
+  - Generate the key `php artisan key:generate`
+  - Run migration `php artisan migrate --seed`
+  - Run Seeder `php artisan db:seed`
+  - Then install all dependencies using `npm install`
+  - Build modules in 1 using `npm run build`
+  - Open app in virtual host laragon
 
-## Learning Laravel
+### How to contribute to this application
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Fork this repository
+- Clone your forked repository
+- Create a new branch
+- Make some changes
+- Commit your changes
+- Push your changes
+- Create a pull request
+- Wait for the review
+- And your changes will be merged
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Feature ( To Do )
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [ ] **DMW++**, DMW++ is the agenda of the Diklat division that contains all about assignments and exams.
+- [ ] **Bukulink**, Bukulink is a platform for obtaining alumni information and etc.
+- [ ] **DBO**, DBO is a platform to view information about HMIF's family.
+- [ ] **Main Website**, Main Website is the main page used as a company profile of HMIF Undip.
 
-## Laravel Sponsors
+### Library
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- [barryvdh/laravel-ide-helper](https://ui.shadcn.com/)
+- [laravel/breeze](https://next-auth.js.org/)
+- [laravel/sail](https://github.com/emilkowalski/vaul)
+- [laravel/sanctum](https://axios-http.com/)
+- [spatie/laravel-ignition](https://www.react-hook-form.com/)
+- **...others**
