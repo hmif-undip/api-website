@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Route:get('website-profile');
-Route::get('website-profile', [WebsiteProfileController::class, 'index'])->name('api.website-profile.index');
+Route::middleware(['cors'])->group(function () {
+    Route::get('website-profile', [WebsiteProfileController::class, 'index'])->name('api.website-profile.index');
+});
