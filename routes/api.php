@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\WebsiteProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route:get('website-profile');
+Route::get('website-profile', [WebsiteProfileController::class, 'index'])->name('api.website-profile.index');
