@@ -2,7 +2,7 @@ name: DEPLOY
 on:
   push:
     branches:
-    - dev
+    - main
 
 jobs:
   deploy:
@@ -19,3 +19,4 @@ jobs:
         remote_port: ${{ secrets.PORT_DEV }}
         remote_user: ${{ secrets.USER_DEV }}
         remote_key: ${{ secrets.DEPLOY_KEY_DEV }}
+        remote_key_pass: ${{ secrets.DEPLOY_KEY_PASS }}
