@@ -12,7 +12,7 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: -avzr --delete
+        switches: -avzr --delete --filter="merge .github/filter.conf"
         path: /
         remote_path: ${{ secrets.PATH_DEV }}
         remote_host: ${{ secrets.HOST_DEV }}
