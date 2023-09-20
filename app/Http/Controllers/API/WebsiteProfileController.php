@@ -13,8 +13,8 @@ class WebsiteProfileController extends Controller
      */
     public function index()
     {
-        $website_profile = websiteProfile::select('website_name', 'tagline', 'keyword', 'description', 'logo', 'url', 'email', 'hp', 'address', 'map', 'year_now')->first();
+        $contact = websiteProfile::select('website_name', 'tagline', 'keyword', 'description', 'logo', 'url', 'email', 'hp', 'address', 'map', 'year_now')->first();
 
-        return ResponseFormatter::success($website_profile, 'Website profile retrieved successfully!');
+        return ResponseFormatter::success($contact, 'Contact retrieved successfully!');
     }
 }
