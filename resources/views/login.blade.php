@@ -23,7 +23,7 @@
                     </div>
 
                     <h1 class="auth-title text-center">
-                        Logins
+                        Login
                     </h1>
 
                     {{-- <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p> --}}
