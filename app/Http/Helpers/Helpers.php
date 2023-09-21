@@ -1,10 +1,10 @@
 <?php
 
 use App\Models\User;
-use App\Models\websiteProfile;
+use App\Models\WebsiteProfile;
 
 function website_profile(){
-    $website_profile = websiteProfile::first();
+    $website_profile = WebsiteProfile::first();
 
     return $website_profile;
 }

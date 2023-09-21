@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\websiteProfile;
+use App\Models\WebsiteProfile;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ class WebsiteProfileController extends Controller
      */
     public function store(Request $request)
     {
-        $website_profile = websiteProfile::first();
+        $website_profile = WebsiteProfile::first();
 
         $request->validate([
             'website_name' => 'required',
@@ -51,7 +51,7 @@ class WebsiteProfileController extends Controller
             $website_profile = $website_profile->update($data);
         }else{
             // Jika tidak ada maka create
-            $website_profile = websiteProfile::create($data);
+            $website_profile = WebsiteProfile::create($data);
         }
 
         return redirect('website-profile')->with('success', 'Website Profile'.($website_profile ? "Updated!" : "Saved!") );

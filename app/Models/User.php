@@ -91,6 +91,6 @@ class User extends Authenticatable
      */
     public function websiteProfile()
     {
-        return $this->hasMany(websiteProfile::class, 'modified_by', 'id');
+        return $this->hasMany(WebsiteProfile::class, 'modified_by', 'id');
     }
 }
