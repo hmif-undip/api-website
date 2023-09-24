@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteProfileController;
@@ -42,6 +43,9 @@ Route::middleware('auth')->group(function () {
             return view('website_profiles.index');
         })->name('website-profile.index');
         Route::post('/website-profile', [WebsiteProfileController::class, 'store'])->name('website-profile.store');
+
+    // Divisions
+        Route::resource('/divisi-jabatan', DivisionController::class);
 });
 
 require __DIR__.'/auth.php';

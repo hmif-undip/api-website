@@ -12,6 +12,75 @@
 
 namespace App\Models{
 /**
+ * App\Models\Division
+ *
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $full_name
+ * @property string|null $color
+ * @property string|null $tagline
+ * @property string|null $motto
+ * @property string|null $description
+ * @property string|null $full_description
+ * @property string|null $content
+ * @property string|null $photo
+ * @property string|null $logo
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Position> $positions
+ * @property-read int|null $positions_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Division newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Division newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Division onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Division query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereColor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereFullDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereFullName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereMotto($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division wherePhoto($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereTagline($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Division withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Division withoutTrashed()
+ */
+	class Division extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Position
+ *
+ * @property int $id
+ * @property string|null $name
+ * @property int|null $division_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Division|null $division
+ * @method static \Illuminate\Database\Eloquent\Builder|Position newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Position newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Position onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Position query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereDivisionId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Position withoutTrashed()
+ */
+	class Position extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id
