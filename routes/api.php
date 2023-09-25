@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\DivisionController;
 use App\Http\Controllers\API\WebsiteProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware(['cors'])->group(function () {
     Route::get('contact', [WebsiteProfileController::class, 'index'])->name('contact.index');
+    Route::get('divisions', [DivisionController::class, 'index'])->name('divisions.index');
 });
