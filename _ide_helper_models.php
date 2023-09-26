@@ -56,6 +56,20 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Member
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Member newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Member newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Member onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Member query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Member withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Member withoutTrashed()
+ */
+	class Member extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Position
  *
  * @property int $id
@@ -63,12 +77,14 @@ namespace App\Models{
  * @property int|null $division_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read \App\Models\Division|null $division
  * @method static \Illuminate\Database\Eloquent\Builder|Position newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Position newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Position onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Position query()
  * @method static \Illuminate\Database\Eloquent\Builder|Position whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Position whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Position whereDivisionId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Position whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Position whereName($value)

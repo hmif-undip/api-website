@@ -21,10 +21,17 @@
     </a>
 </li>
 
-<li class="sidebar-item {{ request()->is('divisi*') ? 'active' : '' }}">
+<li class="sidebar-item {{ request()->is('divisi-jabatan*') ? 'active' : '' }}">
     <a href="{{ url('divisi-jabatan') }}" class='sidebar-link'>
         <i class="bi bi-postcard-fill"></i>
         <span>Divisi & Jabatan</span>
+    </a>
+</li>
+
+<li class="sidebar-item {{ request()->is('anggota*') ? 'active' : '' }}">
+    <a href="{{ url('anggota') }}" class='sidebar-link'>
+        <i class="bi bi-postcard-fill"></i>
+        <span>Anggota</span>
     </a>
 </li>
 

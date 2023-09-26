@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Edit | User")
+@section('title', "Edit Divisi & Jabatan")
 
 @section('css')
     <link rel="stylesheet" href="{{asset('assets/extensions/filepond/filepond.css')}}">

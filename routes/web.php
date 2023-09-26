@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteProfileController;
@@ -46,6 +47,9 @@ Route::middleware('auth')->group(function () {
 
     // Divisions
         Route::resource('/divisi-jabatan', DivisionController::class);
+
+    // Members
+        Route::resource('/anggota', MemberController::class);
 });
 
 require __DIR__.'/auth.php';

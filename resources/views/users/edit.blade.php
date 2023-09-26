@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Edit | User")
+@section('title', "Edit User")
 
 @section('content')
     <div class="page-title mb-4">
