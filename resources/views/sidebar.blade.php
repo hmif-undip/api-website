@@ -35,6 +35,13 @@
     </a>
 </li>
 
+<li class="sidebar-item {{ request()->is('anggota-umum*') ? 'active' : '' }}">
+    <a href="{{ url('anggota-umum') }}" class='sidebar-link'>
+        <i class="bi bi-postcard-fill"></i>
+        <span>Anggota Umum</span>
+    </a>
+</li>
+
 {{-- Logout --}}
     <hr>
 

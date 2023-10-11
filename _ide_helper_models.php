@@ -28,6 +28,20 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\GeneralMembers
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers query()
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|GeneralMembers withoutTrashed()
+ */
+	class GeneralMembers extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Member
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Member newModelQuery()

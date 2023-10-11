@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\GeneralMembersController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -50,6 +51,16 @@ Route::middleware('auth')->group(function () {
 
     // Members
         Route::resource('/anggota', MemberController::class);
+
+    // General Members
+        Route::resource('/anggota-umum', GeneralMembersController::class);
+
 });
+
+Route::get('/pendataan-mahasiswa-informatika', function () {
+    return view('general_members.frontend.create');
+});
+
+Route::post('/pendataan-mahasiswa-informatika', [GeneralMembersController::class, 'store']);
 
 require __DIR__.'/auth.php';
