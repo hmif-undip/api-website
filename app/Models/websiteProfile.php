@@ -51,7 +51,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|websiteProfile withoutTrashed()
  * @mixin \Eloquent
  */
-class websiteProfile extends Model
+class WebsiteProfile extends Model
 {
     use HasFactory, SoftDeletes;
 
