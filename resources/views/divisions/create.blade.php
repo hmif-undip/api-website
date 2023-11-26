@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Tambah Divisi")
+@section('title', "Tambah Divisi & Jabatan")
 
 @section('css')
     <link rel="stylesheet" href="{{asset('assets/extensions/filepond/filepond.css')}}">
@@ -59,7 +59,7 @@
                     @csrf
 
                     <div class="form-body row">
-                        <div class="manage-website py-4 col-md-9  border-end">
+                        <div class="division-profile py-4 col-md-7  border-end">
                             <div class="header mb-4">
                                 <h4 class="card-title">Profil Divisi</h4>
                             </div>
@@ -115,7 +115,7 @@
                                         <label for="logo" class="form-label">Logo Divisi Saat Ini</label>
 
                                         <div>
-                                            <img src="{{asset( 'assets/images/faces/1.jpg' )}}" alt="Logo Saat Ini" width="200px">
+                                            <img src="{{asset( 'assets/images/faces/1.jpg' )}}" alt="Logo Saat Ini" width="150px">
                                         </div>
                                     </div>
 
@@ -123,14 +123,14 @@
                                         <label for="foto" class="form-label">Foto Divisi Saat ini</label>
 
                                         <div>
-                                            <img src="{{asset( 'assets/images/faces/1.jpg' )}}" alt="Foto Saat Ini" width="200px">
+                                            <img src="{{asset( 'assets/images/faces/1.jpg' )}}" alt="Foto Saat Ini" width="150px">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="map-iframe py-4 col-md-3">
+                        <div class="variety-positions py-4 col-md-5">
                             <div class="header mb-4">
                                 <h4 class="card-title">Ragam Jabatan</h4>
                             </div>
@@ -167,7 +167,7 @@
 
                         <hr>
 
-                        <div class="description-of-organizatation py-4">
+                        <div class="division-detail py-4">
                             <div class="header mb-4">
                                 <h4 class="card-title">Detail Divisi</h4>
                             </div>
