@@ -28,12 +28,12 @@
     </a>
 </li>
 
-<li class="sidebar-item {{ request()->is('anggota*') ? 'active' : '' }}">
+{{-- <li class="sidebar-item {{ request()->is('anggota*') ? 'active' : '' }}">
     <a href="{{ url('anggota') }}" class='sidebar-link'>
         <i class="bi bi-postcard-fill"></i>
         <span>Anggota</span>
     </a>
-</li>
+</li> --}}
 
 <li class="sidebar-item {{ request()->is('anggota-umum*') ? 'active' : '' }}">
     <a href="{{ url('anggota-umum') }}" class='sidebar-link'>
