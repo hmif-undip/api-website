@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('nim')->nullable();
+            $table->string('birth_date')->nullable();
             $table->text('home_address')->nullable();
             $table->text('boarding_address')->nullable();
             $table->string('email')->nullable();
             $table->string('telephone')->nullable();
-            $table->year("year")->nullable()->default(date('Y'));
+            $table->year("year")->nullable();
+            $table->string("photo")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
